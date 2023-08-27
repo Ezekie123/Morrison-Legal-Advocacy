@@ -11,6 +11,28 @@
     <!-- Additional CSS -->
     <link href="path/to/additional/css/file.css" rel="stylesheet">
     <title>Contact Us - Morrison Legal Advocacy</title>
+    <style>
+        /* Hide mobile menu initially */
+        #mobile-menu {
+            display: none;
+        }
+
+        /* Show menu when .hidden is removed */
+        #mobile-menu:not(.hidden) {
+            display: block;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 767px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            header {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
@@ -21,13 +43,13 @@
             <a href="#" class="text-xl font-bold">Morrison Legal Advocacy</a>
             <nav class="hidden md:block"> <!-- Hide navigation on small screens -->
                 <ul class="flex space-x-4">
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/LandingPage.html#"
                             class="hover:text-gray-300">Home</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AboutPage.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/AboutPage.html#"
                             class="hover:text-gray-300">About</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/servicepage.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/servicepage.html#"
                             class="hover:text-gray-300">Services</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/ContactUs.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/ContactUs.html#"
                             class="hover:text-gray-300">Contact</a></li>
                 </ul>
             </nav>
@@ -41,13 +63,13 @@
         <!-- Mobile navigation menu -->
         <nav id="mobile-menu" class="md:hidden hidden">
             <ul class="bg-gray-900 text-white py-4 px-8 space-y-4">
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/LandingPage.html#"
                         class="hover:text-gray-300 block">Home</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AboutPage.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/AboutPage.html#"
                         class="hover:text-gray-300 block">About</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/servicepage.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/servicepage.html#"
                         class="hover:text-gray-300 block">Services</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/ContactUs.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/ContactUs.html#"
                         class="hover:text-gray-300 block">Contact</a></li>
             </ul>
         </nav>
@@ -57,10 +79,11 @@
         <h1>Contact Us</h1>
     </section>
 
-    <main style="max-width: 800px; margin: 20px auto; display: flex; justify-content: space-between;">
+    <main style="max-width: 100%; margin: 20px; display: flex; flex-direction: column; gap: 20px;">
 
         <div class="contact-form"
-            style="flex: 1; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            style="padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
             <h2 style="font-size: 24px; margin-bottom: 20px;">Contact Form</h2>
             <form action="https://formsubmit.co/20e8bca6df7acdcfd6eff3115339a7aa" method="POST" method="POST">
                 <label for="name">Name:</label>
@@ -81,7 +104,8 @@
         </div>
 
         <div class="contact-info"
-            style="flex: 1; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            style="padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
             <h2 style="font-size: 24px; margin-bottom: 20px;">Contact Information</h2>
             <p><strong>Morrison Legal Advocacy</strong></p>
             <p>1234 Law Street</p>
@@ -89,7 +113,6 @@
             <p>Email: attorneyjohnmorrison@gmail.com</p>
             <p>Phone: +1 (123) 456-7890</p>
         </div>
-
     </main>
 
     <footer style="background-color: #000; color: white; padding: 20px;">
@@ -123,6 +146,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- Your custom scripts -->
     <script src="path/to/custom/scripts.js"></script>
+
+    <script>
+        // Toggle menu on button click
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+      
+        menuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 

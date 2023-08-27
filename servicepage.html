@@ -12,6 +12,16 @@
     <link href="path/to/additional/css/file.css" rel="stylesheet">
     <title>Our Services</title>
     <style>
+        /* Hide mobile menu initially */
+        #mobile-menu {
+            display: none;
+        }
+
+        /* Show menu when .hidden is removed */
+        #mobile-menu:not(.hidden) {
+            display: block;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
 
@@ -42,13 +52,14 @@
             <a href="#" class="text-xl font-bold">Morrison Legal Advocacy</a>
             <nav class="hidden md:block"> <!-- Hide navigation on small screens -->
                 <ul class="flex space-x-4">
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/LandingPage.html#"
                             class="hover:text-gray-300">Home</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AboutPage.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/AboutPage.html#"
                             class="hover:text-gray-300">About</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/servicepage.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/servicepage.html#"
                             class="hover:text-gray-300">Services</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/ContactUs.html#" class="hover:text-gray-300">Contact</a></li>
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/ContactUs.html#"
+                            class="hover:text-gray-300">Contact</a></li>
                 </ul>
             </nav>
             <!-- Hamburger icon for mobile navigation -->
@@ -61,17 +72,20 @@
         <!-- Mobile navigation menu -->
         <nav id="mobile-menu" class="md:hidden hidden">
             <ul class="bg-gray-900 text-white py-4 px-8 space-y-4">
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/LandingPage.html#"
                         class="hover:text-gray-300 block">Home</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AboutPage.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/AboutPage.html#"
                         class="hover:text-gray-300 block">About</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/servicepage.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/servicepage.html#"
                         class="hover:text-gray-300 block">Services</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/ContactUs.html#" class="hover:text-gray-300 block">Contact</a></li>
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/ContactUs.html#"
+                        class="hover:text-gray-300 block">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div style="width: 40%; display: flex; justify-content: center; align-items: center; font-size: 20px;"><h1>Our Services</h1></div>
+    <div style="width: 40%; display: flex; justify-content: center; align-items: center; font-size: 20px;">
+        <h1>Our Services</h1>
+    </div>
     <div class="service" onclick="toggleServiceDetails('service1')">
         <h2>Litigation and Representation:</h2>
         <p><span style="color: blue;" id="service1-view-more">view More</span></p>
@@ -163,19 +177,28 @@
     <!-- Your custom scripts -->
     <script src="path/to/custom/scripts.js"></script>
     <script>
-    function toggleServiceDetails(serviceId) {
-        const serviceDetails = document.getElementById(serviceId + "-details");
-        const viewMoreSpan = document.getElementById(serviceId + "-view-more");
-        
-        if (serviceDetails.style.display === "none" || serviceDetails.style.display === "") {
-            serviceDetails.style.display = "block";
-            viewMoreSpan.innerText = "Hide";
-        } else {
-            serviceDetails.style.display = "none";
-            viewMoreSpan.innerText = "View More";
+        function toggleServiceDetails(serviceId) {
+            const serviceDetails = document.getElementById(serviceId + "-details");
+            const viewMoreSpan = document.getElementById(serviceId + "-view-more");
+
+            if (serviceDetails.style.display === "none" || serviceDetails.style.display === "") {
+                serviceDetails.style.display = "block";
+                viewMoreSpan.innerText = "Hide";
+            } else {
+                serviceDetails.style.display = "none";
+                viewMoreSpan.innerText = "View More";
+            }
         }
-    }
-</script>
+
+
+        // Toggle menu on button click
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 
 </body>

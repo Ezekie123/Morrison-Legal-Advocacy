@@ -15,6 +15,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <style>
+        /* Hide mobile menu initially */
+        #mobile-menu {
+            display: none;
+        }
+
+        /* Show menu when .hidden is removed */
+        #mobile-menu:not(.hidden) {
+            display: block;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
@@ -77,13 +87,14 @@
             <a href="#" class="text-xl font-bold">Morrison Legal Advocacy</a>
             <nav class="hidden md:block"> <!-- Hide navigation on small screens -->
                 <ul class="flex space-x-4">
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/LandingPage.html#"
                             class="hover:text-gray-300">Home</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AboutPage.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/AboutPage.html#"
                             class="hover:text-gray-300">About</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/servicepage.html#"
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/servicepage.html#"
                             class="hover:text-gray-300">Services</a></li>
-                    <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/ContactUs.html#" class="hover:text-gray-300">Contact</a></li>
+                    <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/ContactUs.html#"
+                            class="hover:text-gray-300">Contact</a></li>
                 </ul>
             </nav>
             <!-- Hamburger icon for mobile navigation -->
@@ -96,13 +107,14 @@
         <!-- Mobile navigation menu -->
         <nav id="mobile-menu" class="md:hidden hidden">
             <ul class="bg-gray-900 text-white py-4 px-8 space-y-4">
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/LandingPage.html#"
                         class="hover:text-gray-300 block">Home</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AboutPage.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/AboutPage.html#"
                         class="hover:text-gray-300 block">About</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/servicepage.html#"
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/servicepage.html#"
                         class="hover:text-gray-300 block">Services</a></li>
-                <li><a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/ContactUs.html#" class="hover:text-gray-300 block">Contact</a></li>
+                <li><a href="file:///C:/Users/FRESH/Desktop/Morrison%20Legal%20Advocacy/ContactUs.html#"
+                        class="hover:text-gray-300 block">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -142,7 +154,8 @@
             When you choose us, you're not just choosing a law firm; you're choosing a trusted ally committed to
             championing your cause
             and ensuring that the principles of justice, fairness, and integrity shine brightly in every legal endeavor.
-            <br></p>
+            <br>
+        </p>
         </p>
     </section>
     <section>
@@ -164,7 +177,8 @@
         <div class="container"
             style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
             <div class="footer-left" style="flex: 1;">
-                <a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#" style="font-size: 24px; font-weight: bold;">Morrison Legal Advocacy</a>
+                <a href="file:///C:/Users/FRESH/Desktop/law-Firm-website/AnthonyJohnMorrison.html#"
+                    style="font-size: 24px; font-weight: bold;">Morrison Legal Advocacy</a>
                 <p style="margin-top: 8px;">1234 Law Street, City Name, Country</p>
             </div>
             <div class="footer-right" style="display: flex; gap: 10px;">
@@ -181,5 +195,15 @@
         </div>
     </footer>
 </body>
+
+<script>
+    // Toggle menu on button click
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </html>
